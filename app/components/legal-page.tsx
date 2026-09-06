@@ -1,4 +1,8 @@
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
+
+const whatsapp =
+  'https://wa.me/972537156553?text=' +
+  encodeURIComponent('היי [שם שלך], אשמח לפרטים נוספים.');
 
 export type LegalSection = {
   title: string;
@@ -28,16 +32,16 @@ export default function LegalPage({
         <a className="legal-back" href="/">
           <ArrowRight size={18} aria-hidden="true" /> חזרה לאתר
         </a>
-        <a className="legal-brand" href="/" aria-label="לביא חשמל — עמוד הבית">
+        <a className="legal-brand" href="/" aria-label="אתר לחשמלאי למכירה — עמוד הבית">
           <span className="brand-mark" aria-hidden="true" />
           <span>
-            <strong>לביא חשמל</strong>
-            <small>שמעון לביא · חשמלאי מוסמך</small>
+            <strong>אתר לחשמלאי למכירה</strong>
+            <small>[שם שלך] · [הסמכה]</small>
           </span>
         </a>
-        <a className="legal-phone" href="tel:+972524242952">
-          <span dir="ltr">052-4242952</span>
-          <Phone size={16} aria-hidden="true" />
+        <a className="legal-phone" href={whatsapp}>
+          <span dir="ltr">053-715-6553</span>
+          <MessageCircle size={16} aria-hidden="true" />
         </a>
       </header>
       <main id="legal-main" className="legal-page">
@@ -74,7 +78,7 @@ export default function LegalPage({
         </div>
       </main>
       <footer className="legal-footer">
-        <span>© {new Date().getFullYear()} לביא חשמל · שמעון לביא</span>
+        <span>© {new Date().getFullYear()} אתר לחשמלאי למכירה · [שם שלך]</span>
         <nav aria-label="מידע משפטי">
           <a href="/privacy">מדיניות פרטיות</a>
           <a href="/terms">תנאי שימוש</a>

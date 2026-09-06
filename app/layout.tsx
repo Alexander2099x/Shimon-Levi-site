@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import AccessibilityWidget from './components/accessibility-widget';
 export const metadata: Metadata = {
-  title: 'לביא חשמל | שמעון לביא — חשמלאי מוסמך באשקלון',
+  title: 'אתר לחשמלאי למכירה | [שם שלך]',
   description:
-    'שמעון לביא, חשמלאי מוסמך באשקלון והסביבה. התקנת לוחות חשמל, עמדות טעינה, תאורה, שקעים ותיקון תקלות לבתים ולעסקים. 052-4242952.',
+    'אתר תדמית לחשמלאי. החליפו את [שם שלך], אזור השירות, ההסמכה ופרטי העסק לפני פרסום. ליצירת קשר ב-WhatsApp: 053-715-6553.',
   robots: { index: false, follow: false },
-  icons: { icon: '/images/logo.png' },
+  icons: { icon: '/favicon.svg' },
 };
 export default function RootLayout({
   children,

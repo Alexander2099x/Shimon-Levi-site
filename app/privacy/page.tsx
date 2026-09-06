@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 import LegalPage from '../components/legal-page';
 export const metadata: Metadata = {
-  title: 'מדיניות פרטיות | לביא חשמל',
-  description: 'מדיניות הפרטיות של אתר לביא חשמל.',
+  title: 'מדיניות פרטיות | אתר לחשמלאי למכירה',
+  description: 'תבנית מדיניות פרטיות לאתר לחשמלאי.',
 };
 export default function PrivacyPage() {
   return (
     <LegalPage
       eyebrow="פרטיות"
       title="מדיניות פרטיות"
-      intro="האתר נועד להציג את שירותי לביא חשמל ולאפשר יצירת קשר ישירה עם שמעון בטלפון או בוואטסאפ."
+      intro="זוהי תבנית לאתר חשמלאי. לפני פרסום, יש לעדכן את שם העסק, פרטי הקשר ומדיניות הפרטיות כך שישקפו את אופן הפעילות בפועל."
       updated="6 בספטמבר 2026"
       sections={[
         {
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
         {
           title: 'יצירת קשר בנושא פרטיות',
           paragraphs: [
-            'לביא חשמל — שמעון לביא. טלפון ו-WhatsApp: 052-4242952. אפשר לפנות בכל שאלה לגבי מידע שנמסר במהלך יצירת הקשר.',
+            '[שם העסק שלך] — [שם שלך]. WhatsApp: 053-715-6553. אפשר לפנות בכל שאלה לגבי מידע שנמסר במהלך יצירת הקשר.',
           ],
         },
       ]}

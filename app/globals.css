@@ -133,13 +133,7 @@ a:hover svg {
   gap: 12px;
 }
 .brand-mark {
-  background-color: #f0efe9 !important;
-  background-blend-mode: multiply;
-  width: 55px;
-  height: 55px;
-  background: url('/images/logo.png') center/cover no-repeat;
-  mix-blend-mode: multiply;
-  display: block;
+  display: none;
 }
 .brand strong {
   display: block;

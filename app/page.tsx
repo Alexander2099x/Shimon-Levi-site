@@ -16,9 +16,8 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from '@/components/ui/accordion';
-const phone = 'tel:+972524242952';
-const wa = (text = 'היי שמעון, אשמח לתאם עבודת חשמל.') =>
-  'https://wa.me/972524242952?text=' + encodeURIComponent(text);
+const wa = (text = 'היי [שם שלך], אשמח לתאם עבודת חשמל.') =>
+  'https://wa.me/972537156553?text=' + encodeURIComponent(text);
 const services = [
   [
     'לוחות חשמל',
@@ -58,11 +57,11 @@ function Label({ children }: { children: React.ReactNode }) {
 }
 function Brand() {
   return (
-    <a href="#home" className="brand" aria-label="לביא חשמל — לעמוד הראשי">
+    <a href="#home" className="brand" aria-label="אתר לחשמלאי למכירה — לעמוד הראשי">
       <span className="brand-mark" aria-hidden="true" />
       <span>
-        <strong>לביא חשמל</strong>
-        <small>שמעון לביא · חשמלאי מוסמך</small>
+        <strong>אתר לחשמלאי למכירה</strong>
+        <small>[שם שלך] · [הסמכה]</small>
       </span>
     </a>
   );
@@ -82,8 +81,8 @@ export default function Home() {
           <a href="#area">אזורי שירות</a>
           <a href="#contact">נדבר?</a>
         </nav>
-        <a className="header-call" href={phone}>
-          <span dir="ltr">052-4242952</span>
+        <a className="header-call" href={wa()}>
+          <span dir="ltr">053-715-6553</span>
           <Phone size={16} />
         </a>
         <button
@@ -120,10 +119,10 @@ export default function Home() {
           />
           <div className="hero-top">
             <span>חשמל לבית. חשמל לעסק.</span>
-            <span dir="ltr">LAVI ELECTRIC / ASHKELON</span>
+            <span>אתר תדמית לחשמלאי</span>
           </div>
           <div className="hero-content">
-            <Label>שמעון לביא · אשקלון והסביבה</Label>
+            <Label>[שם שלך] · [אזור השירות שלך]</Label>
             <h1 id="hero-heading">
               חשמל שעובד.
               <br />
@@ -132,10 +131,10 @@ export default function Home() {
             <p>
               מהתקנת שקע ועד לוח חשמל חדש.
               <br />
-              שירות אישי ומקצועי, עם שמעון לאורך כל הדרך.
+              שירות אישי ומקצועי, איתכם לאורך כל הדרך.
             </p>
             <div className="actions">
-              <a className="button primary" href={phone}>
+              <a className="button primary" href={wa()}>
                 בואו נדבר <Phone size={17} />
               </a>
               <a
@@ -162,8 +161,8 @@ export default function Home() {
         </section>
         <div className="service-strip">
           <span>שירות לבתים ולעסקים</span>
-          <span>אשקלון והסביבה · גם במרכז בתיאום</span>
-          <span>זמינות גם בערב, עד 21:00</span>
+          <span>[אזור השירות שלך] · בתיאום</span>
+          <span>[שעות הפעילות שלך]</span>
         </div>
         <section className="section about" id="about">
           <div>
@@ -178,13 +177,13 @@ export default function Home() {
             </h2>
             <div className="about-bottom">
               <p>
-                אני שמעון לביא, חשמלאי מוסמך מאשקלון.
+                אני [שם שלך], [הסמכה].
                 <br />
                 מבצע התקנות, תיקונים ותחזוקת חשמל לבתים ולעסקים — עם שירות אישי,
                 הסבר ברור ותיאום ישירות מולי.
               </p>
-              <a className="text-link" href={phone}>
-                מדברים ישירות עם שמעון <Arrow />
+              <a className="text-link" href={wa()}>
+                מדברים ישירות עם [שם שלך] <Arrow />
               </a>
             </div>
           </div>
@@ -218,7 +217,7 @@ export default function Home() {
                 <AccordionContent className="service-description">
                   <p>{description}</p>
                   <a
-                    href={wa(`היי שמעון, אשמח לפרטים לגבי ${title}.`)}
+                    href={wa(`היי [שם שלך], אשמח לפרטים לגבי ${title}.`)}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -234,33 +233,33 @@ export default function Home() {
             <span className="orbit orbit-one" />
             <span className="orbit orbit-two" />
             <span className="orbit orbit-three" />
-            <span className="city center-city">המרכז</span>
-            <span className="city ashdod">אשדוד</span>
+            <span className="city center-city">האזור שלכם</span>
+            <span className="city ashdod">אצלכם</span>
             <span className="city ashkelon">
               <i />
-              אשקלון
+              קרוב
             </span>
-            <span className="city south-city">והסביבה</span>
+            <span className="city south-city">ובסביבה</span>
             <span className="map-caption">קרוב אליכם, כשצריך.</span>
           </div>
           <div className="coverage-copy">
             <Label>כאן באזור</Label>
             <h2>
-              מאשקלון,
+              [אזור השירות]
               <br />
               עד אליכם.
             </h2>
             <p>
-              שירות באשקלון והסביבה, וגם באזור המרכז בתיאום מראש. לבית, לחנות,
+              שירות ב[אזור השירות שלך], ובאזורים נוספים בתיאום מראש. לבית, לחנות,
               למשרד ולכל מקום שצריך בו חשמלאי.
             </p>
             <div className="coverage-detail">
               <MapPin size={17} />
-              <span>אשקלון והסביבה · מרכז בתיאום</span>
+              <span>[אזור השירות שלך] · בתיאום</span>
             </div>
             <div className="coverage-detail">
               <Clock3 size={17} />
-              <span>זמין גם בערבים, עד השעה 21:00</span>
+              <span>[שעות הפעילות שלך]</span>
             </div>
             <a
               className="button outlined"
@@ -286,8 +285,8 @@ export default function Home() {
                 <br />
                 מתקשרים או שולחים הודעה בוואטסאפ.
               </p>
-              <a className="big-phone" href={phone} dir="ltr">
-                052-4242952 <ArrowUpLeft strokeWidth={1} />
+              <a className="big-phone" href={wa()} dir="ltr">
+                053-715-6553 <ArrowUpLeft strokeWidth={1} />
               </a>
               <a
                 className="text-link"
@@ -310,25 +309,25 @@ export default function Home() {
           </a>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} לביא חשמל · שמעון לביא</span>
+          <span>© {new Date().getFullYear()} אתר לחשמלאי למכירה · [שם שלך]</span>
           <nav className="footer-legal" aria-label="מידע משפטי">
             <a href="/privacy">מדיניות פרטיות</a>
             <a href="/terms">תנאי שימוש</a>
             <a href="/accessibility">הצהרת נגישות</a>
           </nav>
           <a
-            href="https://www.google.com/search?q=שמעון+לביא+חשמלאי+אשקלון"
+            href={wa()}
             target="_blank"
             rel="noreferrer"
           >
-            לפרופיל העסק בגוגל ↖
+            בואו נדבר ב-WhatsApp ↖
           </a>
           <span>תמונת האווירה נוצרה להמחשה</span>
         </div>
       </footer>
       <div className="mobile-contact">
-        <a href={phone}>
-          <Phone size={17} /> התקשרו לשמעון
+        <a href={wa()}>
+          <Phone size={17} /> דברו עם [שם שלך]
         </a>
         <a href={wa()} target="_blank" rel="noreferrer">
           <MessageCircle size={17} /> וואטסאפ
